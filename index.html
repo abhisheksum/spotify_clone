@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav>
+
+        <div class="logo">
+            <i class="fa-brands fa-spotify"></i>
+            <span>Spotify</span>
+        </div>
+
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Search</a></li>
+            <li><a href="#">Library</a></li>
+        </ul>
+
+    </nav>
+
+    <!-- ================= MAIN ================= -->
+
+    <div class="container">
+
+        <!-- Sidebar -->
+
+        <aside class="sidebar">
+
+            <h2>Your Library</h2>
+
+            <div class="playlist">
+
+                <div class="playlist-card">
+                    <i class="fa-solid fa-heart"></i>
+                    <div>
+                        <h3>Liked Songs</h3>
+                        <p>120 Songs</p>
+                    </div>
+                </div>
+
+                <div class="playlist-card">
+                    <i class="fa-solid fa-music"></i>
+                    <div>
+                        <h3>Top Hits</h3>
+                        <p>50 Songs</p>
+                    </div>
+                </div>
+
+                <div class="playlist-card">
+                    <i class="fa-solid fa-headphones"></i>
+                    <div>
+                        <h3>Chill Vibes</h3>
+                        <p>40 Songs</p>
+                    </div>
+                </div>
+
+                <div class="playlist-card">
+                    <i class="fa-solid fa-record-vinyl"></i>
+                    <div>
+                        <h3>Workout</h3>
+                        <p>35 Songs</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </aside>
+
+        <!-- Content -->
+
+        <main>
+
+            <h1>Trending Songs</h1>
+
+            <div class="songs">
+
+                <!-- Song 1 -->
+
+                <div class="song-card">
+
+                    <img src="images/cover1.jpg" alt="">
+
+                    <h3>Perfect</h3>
+
+                    <p>Ed Sheeran</p>
+
+                    <button class="playBtn" data-song="songs/song1.mp3">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+
+                </div>
+
+                <!-- Song 2 -->
+
+                <div class="song-card">
+
+                    <img src="images/cover2.jpg" alt="">
+
+                    <h3>Shape of You</h3>
+
+                    <p>Ed Sheeran</p>
+
+                    <button class="playBtn" data-song="songs/song2.mp3">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+
+                </div>
+
+                <!-- Song 3 -->
+
+                <div class="song-card">
+
+                    <img src="images/cover3.jpg" alt="">
+
+                    <h3>Believer</h3>
+
+                    <p>Imagine Dragons</p>
+
+                    <button class="playBtn" data-song="songs/song3.mp3">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+
+                </div>
+
+                <!-- Song 4 -->
+
+                <div class="song-card">
+
+                    <img src="images/cover4.jpg" alt="">
+
+                    <h3>Faded</h3>
+
+                    <p>Alan Walker</p>
+
+                    <button class="playBtn" data-song="songs/song4.mp3">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+
+                </div>
+
+                <!-- Song 5 -->
+
+                <div class="song-card">
+
+                    <img src="images/cover5.jpg" alt="">
+
+                    <h3>On My Way</h3>
+
+                    <p>Alan Walker</p>
+
+                    <button class="playBtn" data-song="songs/song5.mp3">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+
+                </div>
+
+                <!-- Song 6 -->
+
+                <div class="song-card">
+
+                    <img src="images/cover6.jpg" alt="">
+
+                    <h3>Closer</h3>
+
+                    <p>The Chainsmokers</p>
+
+                    <button class="playBtn" data-song="songs/song6.mp3">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+
+                </div>
+
+                <!-- Song 7 -->
+
+                <div class="song-card">
+
+                    <img src="images/cover7.jpg" alt="">
+
+                    <h3>Let Me Love You</h3>
+
+                    <p>DJ Snake</p>
+
+                    <button class="playBtn" data-song="songs/song7.mp3">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+
+                </div>
+
+                <!-- Song 8 -->
+
+                <div class="song-card">
+
+                    <img src="images/cover8.jpg" alt="">
+
+                    <h3>Hymn For The Weekend</h3>
+
+                    <p>Coldplay</p>
+
+                    <button class="playBtn" data-song="songs/song8.mp3">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- ================= PLAYER ================= -->
+
+    <footer class="player">
+
+        <div class="song-info">
+
+            <img src="images/cover1.jpg" id="currentCover">
+
+            <div>
+
+                <h4 id="currentSong">Perfect</h4>
+
+                <p id="currentArtist">Ed Sheeran</p>
+
+            </div>
+
+        </div>
+
+        <div class="controls">
+
+            <button id="prev">
+                <i class="fa-solid fa-backward"></i>
+            </button>
+
+            <button id="masterPlay">
+                <i class="fa-solid fa-play"></i>
+            </button>
+
+            <button id="next">
+                <i class="fa-solid fa-forward"></i>
+            </button>
+
+        </div>
+
+        <div class="progress">
+
+            <span id="currentTime">0:00</span>
+
+            <input type="range" id="progressBar" min="0" max="100" value="0">
+
+            <span id="duration">0:00</span>
+
+        </div>
+
+        <div class="volume">
+
+            <i class="fa-solid fa-volume-high"></i>
+
+            <input type="range" id="volume" min="0" max="1" step="0.1" value="1">
+
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
